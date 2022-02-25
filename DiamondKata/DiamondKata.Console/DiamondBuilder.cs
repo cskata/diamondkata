@@ -48,24 +48,30 @@ namespace DiamondKata.ConsoleApp
 
         private string BuildLine(int index, int middleIndex, string newLine)
         {
-            StringBuilder swappedLine = new StringBuilder(newLine);
+            StringBuilder lineToSwap = new StringBuilder(newLine);
 
             if (index <= middleIndex)
             {
-                var letter = Alphabet.ToCharArray()[index];
-
-                var indexToSwap1 = middleIndex + index;
-                var indexToSwap2 = middleIndex - index;
-                
-                swappedLine[indexToSwap1] = letter;
-                swappedLine[indexToSwap2] = letter;
+                SwapLetters(middleIndex, index, ref lineToSwap);
             }
             else
             {
-
+                var reverseIndex = (middleIndex * 2) - index;
+                SwapLetters(middleIndex, reverseIndex, ref lineToSwap);
             }
 
-            return swappedLine.ToString();
+            return lineToSwap.ToString();
+        }
+
+        private void SwapLetters(int middleIndex, int index, ref StringBuilder swappedLine)
+        {
+            var letter = Alphabet.ToCharArray()[index];
+
+            var indexToSwap1 = middleIndex + index;
+            var indexToSwap2 = middleIndex - index;
+
+            swappedLine[indexToSwap1] = letter;
+            swappedLine[indexToSwap2] = letter;
         }
 
         private string InitializeLineTemplate(int lineLength)
