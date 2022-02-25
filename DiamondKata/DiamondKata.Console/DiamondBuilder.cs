@@ -5,7 +5,6 @@ namespace DiamondKata.ConsoleApp
     internal class DiamondBuilder
     {
         private const string Alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
         private string _givenLetter { get; }
         private string _diamond { get; set; }
 
@@ -37,13 +36,8 @@ namespace DiamondKata.ConsoleApp
 
         private int GetLineLength()
         {
-            var placeInAlphabet = GetPlaceInAlphabet();
-            return ((placeInAlphabet + 1) * 2) - 1;
-        }
-
-        private int GetPlaceInAlphabet()
-        {
-            return Alphabet.IndexOf(_givenLetter);
+            var placeInAlphabet = Alphabet.IndexOf(_givenLetter);
+            return (placeInAlphabet * 2) + 1;
         }
 
         private string BuildLine(int index, int middleIndex, string newLine)
