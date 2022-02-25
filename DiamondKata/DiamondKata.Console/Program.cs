@@ -1,10 +1,11 @@
-﻿namespace DiamondKata
+﻿namespace DiamondKata.ConsoleApp
 {
     public class Program
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            var givenLetter = ConsoleHandler.GetUserInput();
+            Console.WriteLine("The letter is: " + givenLetter);
         }
     }
 }

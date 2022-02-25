@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiamondKata.Console", "DiamondKata.Console\DiamondKata.Console.csproj", "{37352B25-7A85-467D-B2E4-ACF94B1C7DCD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiamondKata.ConsoleApp", "DiamondKata.Console\DiamondKata.ConsoleApp.csproj", "{37352B25-7A85-467D-B2E4-ACF94B1C7DCD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
