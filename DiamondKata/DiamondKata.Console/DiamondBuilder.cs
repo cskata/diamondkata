@@ -2,18 +2,17 @@
 
 namespace DiamondKata.ConsoleApp
 {
-    internal class DiamondBuilder
+    public class DiamondBuilder
     {
         private const string Alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         private string _givenLetter { get; }
-        private string _diamond { get; set; }
 
         public DiamondBuilder(string givenLetter)
         {
             _givenLetter = givenLetter;
         }
 
-        internal void BuildDiamond()
+        public string BuildDiamond()
         {
             var lineLength = GetLineLength();
             var middleIndex = (lineLength - 1) / 2;
@@ -26,12 +25,12 @@ namespace DiamondKata.ConsoleApp
                 builder.AppendLine(BuildLine(i, middleIndex, newLine));
             }
 
-            _diamond = builder.ToString();
+            return builder.ToString();
         }
 
-        internal void PrintDiamond()
+        internal void PrintDiamond(string diamond)
         {
-            Console.WriteLine(_diamond);
+            Console.WriteLine(diamond);
         }
 
         private int GetLineLength()

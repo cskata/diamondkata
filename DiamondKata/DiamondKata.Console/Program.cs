@@ -7,8 +7,8 @@
             var givenLetter = ConsoleHandler.GetUserInput();
 
             var diamondBuilder = new DiamondBuilder(givenLetter);
-            diamondBuilder.BuildDiamond();
-            diamondBuilder.PrintDiamond();
+            var diamond = diamondBuilder.BuildDiamond();
+            diamondBuilder.PrintDiamond(diamond);
         }
     }
 }
