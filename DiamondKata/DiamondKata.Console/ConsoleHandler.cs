@@ -2,7 +2,7 @@
 
 namespace DiamondKata.ConsoleApp
 {
-    internal static class ConsoleHandler
+    public static class ConsoleHandler
     {
         private static readonly string _singleLetterOnlyRegex = @"^[a-zA-Z]{1}$";
 
@@ -20,7 +20,7 @@ namespace DiamondKata.ConsoleApp
             return letter.ToUpper();
         }
 
-        private static bool IsSingleLetter(string input)
+        public static bool IsSingleLetter(string input)
         {
             return Regex.IsMatch(input, _singleLetterOnlyRegex);
         }
