@@ -20,13 +20,8 @@ namespace DiamondKata.ConsoleApp
             return letter.ToUpper();
         }
 
-        internal static bool IsSingleLetter(string? input)
+        internal static bool IsSingleLetter(string input)
         {
-            if (input == null)
-            {
-                return false;
-            }
-
             return Regex.IsMatch(input, _singleLetterOnlyRegex);
         }
     }

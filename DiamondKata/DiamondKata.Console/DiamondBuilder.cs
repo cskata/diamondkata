@@ -7,7 +7,7 @@ namespace DiamondKata.ConsoleApp
         private const string Alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
         private string _givenLetter { get; }
-        private string _diamond { get; set; } = string.Empty;
+        private string _diamond { get; set; }
 
         public DiamondBuilder(string givenLetter)
         {
