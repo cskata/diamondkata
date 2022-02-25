@@ -5,7 +5,10 @@
         public static void Main(string[] args)
         {
             var givenLetter = ConsoleHandler.GetUserInput();
-            Console.WriteLine("The letter is: " + givenLetter);
+
+            var diamondBuilder = new DiamondBuilder(givenLetter);
+            diamondBuilder.BuildDiamond();
+            diamondBuilder.PrintDiamond();
         }
     }
 }

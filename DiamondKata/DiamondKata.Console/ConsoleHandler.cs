@@ -4,7 +4,7 @@ namespace DiamondKata.ConsoleApp
 {
     internal static class ConsoleHandler
     {
-        private static readonly string LetterOnlyRegex = @"^[a-zA-Z]{1}$";
+        private static readonly string _singleLetterOnlyRegex = @"^[a-zA-Z]{1}$";
 
         internal static string GetUserInput()
         {
@@ -27,7 +27,7 @@ namespace DiamondKata.ConsoleApp
                 return false;
             }
 
-            return Regex.IsMatch(input, LetterOnlyRegex);
+            return Regex.IsMatch(input, _singleLetterOnlyRegex);
         }
     }
 }
