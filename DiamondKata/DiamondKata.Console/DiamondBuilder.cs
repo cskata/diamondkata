@@ -35,8 +35,8 @@ namespace DiamondKata.ConsoleApp
 
         private int GetLineLength()
         {
-            var placeInAlphabet = Alphabet.IndexOf(_givenLetter);
-            return (placeInAlphabet * 2) + 1;
+            var indexInAlphabet = Alphabet.IndexOf(_givenLetter);
+            return (indexInAlphabet * 2) + 1;
         }
 
         private string BuildLine(int index, int middleIndex, string newLine)
@@ -56,15 +56,15 @@ namespace DiamondKata.ConsoleApp
             return lineToSwap.ToString();
         }
 
-        private void SwapLetters(int middleIndex, int index, ref StringBuilder swappedLine)
+        private void SwapLetters(int middleIndex, int index, ref StringBuilder lineToSwap)
         {
             var letter = Alphabet.ToCharArray()[index];
 
             var indexToSwap1 = middleIndex + index;
             var indexToSwap2 = middleIndex - index;
 
-            swappedLine[indexToSwap1] = letter;
-            swappedLine[indexToSwap2] = letter;
+            lineToSwap[indexToSwap1] = letter;
+            lineToSwap[indexToSwap2] = letter;
         }
 
         private string InitializeLineTemplate(int lineLength)
